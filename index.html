@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniil Chess School | Онлайн-шахи</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      ♟️ <span>Daniil Chess School</span>
+      <span class="badge">онлайн-школа</span>
+    </a>
+    <nav class="links">
+      <a data-nav href="index.html">Головна</a>
+      <a data-nav href="courses.html">Курси</a>
+      <a data-nav href="contacts.html">Контакти</a>
+      <button class="btn primary" data-open-modal>Записатися</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1 class="h1">Шахи, які не нудні.Результат, який видно.</h1>
+        <p class="lead">
+          Навчання для дітей та дорослих: від перших ходів до впевненої гри.
+          Структурні уроки, практика і зрозумілі домашні завдання.
+        </p>
+        <div class="pillrow" style="margin-top:14px;">
+          <span class="pill">Онлайн уроки 1:1</span>
+          <span class="pill">Групи 4–8 людей</span>
+          <span class="pill">Турніри + розбір партій</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+          <button class="btn primary" data-open-modal>Записатися на пробне</button>
+          <a class="btn" href="courses.html">Дивитися курси</a>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <div class="kpi">
+          <div class="item">
+            <div class="num">60 хв</div>
+            <div class="txt">тривалість заняття</div>
+          </div>
+          <div class="item">
+            <div class="num">+тактика</div>
+            <div class="txt">щотижневі задачі</div>
+          </div>
+          <div class="item">
+            <div class="num">розбір</div>
+            <div class="txt">помилок після гри</div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <p class="muted" style="margin:0;">
+          Формат: коротка теорія → вправи → партія → аналіз. Без “води”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="card pad">
+        <h2 class="title">Як проходить навчання</h2>
+        <ul class="list">
+          <li><b>Діагностика</b> рівня та цілей (1 заняття)</li>
+          <li><b>План</b> на 4 тижні з конкретними темами</li>
+          <li><b>Практика</b>: партії + розбір ключових моментів</li>
+          <li><b>Домашка</b>: 10–20 хв/день, без перевантаження</li>
+        </ul>
+      </div>
+
+      <div class="card pad">
+        <h2 class="title">FAQ</h2>
+        <div class="faq">
+          <div class="faq-item" data-faq-item>
+            <button class="faq-q" type="button" data-faq-q>
+              З якого віку можна починати?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              Зазвичай з 6–7 років. Але бувають винятки: якщо дитина уважна і готова сприймати правила.
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq-item>
+            <button class="faq-q" type="button" data-faq-q>
+              Потрібно купувати шахівницю?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              Бажано. Онлайн-граємо на платформі, але реальна дошка прискорює прогрес і робить навчання “живішим”.
+            </div>
+          </div>
+
+          <div class="faq-item" data-faq-item>
+            <button class="faq-q" type="button" data-faq-q>
+              Скільки часу потрібно на самостійні заняття?
+              <span class="chev">▾</span>
+            </button>
+            <div class="faq-a">
+              Для стабільного росту: 10–20 хвилин щодня (тактика + 1 коротка партія або розбір).
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <button class="btn primary" data-open-modal>Записатися</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> Daniil Chess School. Навчання шахів онлайн.
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" data-modal aria-hidden="true" role="dialog" aria-label="Форма запису">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div style="padding:0 0 0 4px;">
+        <div style="font-weight:900;">Запис на пробне заняття</div>
+        <div class="muted" style="font-size:13px;">Залиште контакти і ми напишемо вам</div>
+      </div>
+      <button class="close" type="button" aria-label="Закрити" data-close-modal>✕</button>
+    </div>
+
+    <div class="modal-body">
+      <form data-validate>
+        <div class="field">
+          <label for="name">Ім’я</label>
+          <input id="name" name="name" placeholder="Наприклад, Андрій" />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" placeholder="+380..." />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" placeholder="name@gmail.com" />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label for="course">Цікавить курс</label>
+          <select id="course" name="course">
+            <option value="Початківець">Початківець</option>
+            <option value="Середній рівень">Середній рівень</option>
+            <option value="Підготовка до турнірів">Підготовка до турнірів</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="msg">Коментар (необов’язково)</label>
+          <textarea id="msg" name="message" placeholder="Коли вам зручно займатися?"></textarea>
+        </div>
+
+        <button class="btn primary" type="submit">Надіслати</button>
+        <div class="toast" data-toast></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

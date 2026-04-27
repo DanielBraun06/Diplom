@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniil Chess School | Курси</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      ♟️ <span>Daniil Chess School</span>
+      <span class="badge">курси</span>
+    </a>
+    <nav class="links">
+      <a data-nav href="index.html">Головна</a>
+      <a data-nav href="courses.html">Курси</a>
+      <a data-nav href="contacts.html">Контакти</a>
+      <button class="btn primary" data-open-modal>Записатися</button>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1 class="h1" style="font-size:38px;">Курси та програми</h1>
+    <p class="lead">Виберіть рівень і формат. Можна почати з пробного.</p>
+
+    <div class="filters" data-filters>
+      <span class="pill">Фільтр:</span>
+      <button class="btn small filter-btn" type="button" data-filter="all" aria-pressed="true">Усі</button>
+      <button class="btn small filter-btn" type="button" data-filter="beginner" aria-pressed="false">Початківець</button>
+      <button class="btn small filter-btn" type="button" data-filter="intermediate" aria-pressed="false">Середній</button>
+      <button class="btn small filter-btn" type="button" data-filter="tournament" aria-pressed="false">Турніри</button>
+    </div>
+
+    <div class="course-grid">
+      <article class="card pad course" data-course-card data-level="beginner">
+        <h3>Старт з нуля</h3>
+        <div class="meta">Рівень: Початківець • 4 тижні</div>
+        <p class="muted">Правила, базові мати, тактика, перші дебюти, як не програвати за 10 ходів.</p>
+        <div class="price">від 900 грн / місяць</div>
+        <div class="actions">
+          <button class="btn primary" data-open-modal data-course="Початківець">Записатися</button>
+          <a class="btn" href="contacts.html">Уточнити розклад</a>
+        </div>
+      </article>
+
+      <article class="card pad course" data-course-card data-level="intermediate">
+        <h3>Стабільний прогрес</h3>
+        <div class="meta">Рівень: Середній • 6 тижнів</div>
+        <p class="muted">Плани в мітельшпілі, типові структури пішаків, розбір партій, тренування розрахунку.</p>
+        <div class="price">від 1200 грн / місяць</div>
+        <div class="actions">
+          <button class="btn primary" data-open-modal data-course="Середній рівень">Записатися</button>
+          <a class="btn" href="index.html">Як проходить навчання</a>
+        </div>
+      </article>
+
+      <article class="card pad course" data-course-card data-level="tournament">
+        <h3>Підготовка до турнірів</h3>
+        <div class="meta">Рівень: Турніри • індивідуально</div>
+        <p class="muted">Дебютний репертуар, підготовка під суперника, психологія, тайм-менеджмент, аналіз помилок.</p>
+        <div class="price">від 1500 грн / місяць</div>
+        <div class="actions">
+          <button class="btn primary" data-open-modal data-course="Підготовка до турнірів">Записатися</button>
+          <a class="btn" href="contacts.html">Написати питання</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="card pad">
+      <h2 class="title">Що входить у програму</h2>
+      <ul class="list">
+        <li><b>План</b> навчання під ваш рівень</li>
+        <li><b>Домашні</b> завдання + перевірка</li>
+        <li><b>Розбір</b> партій після гри</li>
+        <li><b>Рекомендації</b> що тренувати між уроками</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Daniil Chess School.</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" data-modal aria-hidden="true" role="dialog" aria-label="Форма запису">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div style="padding:0 0 0 4px;">
+        <div style="font-weight:900;">Запис</div>
+        <div class="muted" style="font-size:13px;">Оберіть курс і залиште контакти</div>
+      </div>
+      <button class="close" type="button" aria-label="Закрити" data-close-modal>✕</button>
+    </div>
+
+    <div class="modal-body">
+      <form data-validate>
+        <div class="field">
+          <label>Ім’я</label>
+          <input name="name" placeholder="Ваше ім’я" />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label>Телефон</label>
+          <input name="phone" placeholder="+380..." />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input name="email" placeholder="name@gmail.com" />
+          <div class="error">Помилка</div>
+        </div>
+
+        <div class="field">
+          <label>Курс</label>
+          <select name="course">
+            <option value="Початківець">Початківець</option>
+            <option value="Середній рівень">Середній рівень</option>
+            <option value="Підготовка до турнірів">Підготовка до турнірів</option>
+          </select>
+        </div>
+
+        <button class="btn primary" type="submit">Надіслати</button>
+        <div class="toast" data-toast></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
